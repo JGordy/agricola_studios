@@ -1,0 +1,56 @@
+/* Start out with the custom css variables for the background sections */
+
+:root {
+  /* Background colors */
+  --light-section-bg:   #FFFFFF;
+  --medium-section-bg:  #626365;
+  --dark-section-bg:    #393E42;
+  --bg-texture:         url('../assets/wild_oliva/wild_oliva_@2X.png');
+
+  /* Text colors */
+  --light-text-color:   #ECF0F2;
+  --text-color:         #4E5255;
+  --medium-text-color:  #888F87;
+  --highlight-color:    #B72729;
+}
+
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.section h2, footer h2 {
+  text-align: center;
+  font-family: sans-serif;
+  color: var(--light-text-color);
+  font-weight: 200;
+}
+
+header {
+  min-height: 90vh;
+}
+
+.section#quote {
+  background-color: var(--medium-section-bg);
+  min-height: 12vh;
+}
+
+.section#skills,
+footer {
+  background-color: var(--dark-section-bg);
+}
+
+.section#work {
+  background: var(--bg-texture);
+  background-repeat: repeat;
+}
+
+footer {
+  min-height: 30vh;
+  padding: 2rem;
+}
