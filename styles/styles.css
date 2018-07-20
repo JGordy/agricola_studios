@@ -5,7 +5,7 @@
   --light-section-bg:   #FFFFFF;
   --medium-section-bg:  #626365;
   --dark-section-bg:    #393E42;
-  --bg-texture:         url('../assets/wild_oliva/wild_oliva_@2X.png');
+  --bg-texture:         url('../assets/images/wild_oliva/wild_oliva_@2X.png');
 
   /* Text colors */
   --light-text-color:   #ECF0F2;
@@ -17,6 +17,7 @@
 *, body {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 .section {
@@ -24,31 +25,100 @@
   padding: 2rem;
 }
 
-.section h2, footer h2 {
+.section h2,
+.section h3,
+footer h2,
+header h2 {
   text-align: center;
-  font-family: sans-serif;
   color: var(--light-text-color);
   font-weight: 200;
+  text-transform: uppercase;
 }
 
-header {
-  min-height: 90vh;
+/* Header Section Styling */
+
+.header {
+  min-height: 100vh;
 }
 
-.section#quote {
+.hero {
+  background: url("../assets/images/jon-flobrant-462801-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 65%;
+  width: 100%;
+  height: 60vh;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.title-wrapper {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  width: 30%;
+}
+
+.title-wrapper .pipe {
+  margin: 0 0.5rem;
+}
+
+.title-wrapper h4 {
+  font-weight: lighter;
+  padding-top: 0.4rem;
+  opacity: 0.8;
+}
+
+.profile img {
+  border: 4px solid white;
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+}
+
+/* Quote Section Styling */
+
+.section.quote {
   background-color: var(--medium-section-bg);
   min-height: 12vh;
 }
+
+.quote h2 {
+  font-style: italic;
+  text-transform: none;
+}
+
+#cite {
+  margin-top: 2rem;
+  margin-right: 7rem;
+  text-align: right;
+}
+
+#cite span {
+  font-weight: bold;
+}
+
+/* Skills Section Styling */
 
 .section#skills,
 footer {
   background-color: var(--dark-section-bg);
 }
 
+/* Work Section Styling */
+
 .section#work {
   background: var(--bg-texture);
   background-repeat: repeat;
 }
+
+/* Footer Section Styling */
 
 footer {
   min-height: 30vh;
