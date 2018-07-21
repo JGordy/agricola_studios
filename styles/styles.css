@@ -12,6 +12,18 @@
   --text-color:         #4E5255;
   --medium-text-color:  #888F87;
   --highlight-color:    #B72729;
+
+  /* Fonts */
+  --custom-font: 'American Captain';
+}
+
+@font-face {
+  font-family: 'American Captain';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('American Captain'),
+    url('../assets/fonts/American Captain.ttf') format('ttf');
 }
 
 *, body {
@@ -72,7 +84,7 @@ header h2 {
 .title-wrapper h4 {
   font-weight: lighter;
   padding-top: 0.4rem;
-  opacity: 0.8;
+  color: var(--light-text-color);
 }
 
 .profile img {
@@ -116,6 +128,81 @@ footer {
 .section#work {
   background: var(--bg-texture);
   background-repeat: repeat;
+}
+
+#videos-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-top: 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.youtube-player {
+    position: relative;
+    /* padding-bottom: 56.23%; */
+    padding-bottom: 18%;
+    /* Use 75% for 4:3 videos ? */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 0.25rem;
+    flex-basis: 32.5%;
+}
+
+.youtube-player:hover,
+.youtube-player:hover img {
+  /* NOTE Use if image is in color for hover effect */
+  /* -webkit-filter: brightness(75%); */
+
+  /* NOTE use if image is in grayscale */
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .25s all;
+    -moz-transition: .25s all;
+    transition: .25s all;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.youtube-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    /* background: url("https://i.imgur.com/TxzC70f.png") no-repeat; */
+    cursor: pointer;
 }
 
 /* Footer Section Styling */
