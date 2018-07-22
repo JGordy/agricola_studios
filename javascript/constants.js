@@ -1,8 +1,3 @@
-// YouTube related credentials
-const youTubeChannelId = 'YOUR-CHANNEL-ID';
-const YTkey = 'YOUR-API-KEY';
-let YTurl = `https://www.googleapis.com/youtube/v3/search?key=${YTkey}&channelId=${youTubeChannelId}&part=snippet,id&order=date&maxResults=20`;
-
 const profileLinks = [
   {
     site: 'YouTube',

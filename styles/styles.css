@@ -211,3 +211,20 @@ footer {
   min-height: 30vh;
   padding: 2rem;
 }
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+#map, .email-wrapper {
+  height: 225px;
+  width: 450px;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+#map img {
+  border-radius: 15px;
+}
