@@ -17,6 +17,24 @@ const profileLinks = [
   }
 ];
 
+const skills = [
+  {
+    skill: 'Drone',
+    icon: './assets/icons/icons8-drone-96.png',
+    text: 'Drone'
+  },
+  {
+    skill: 'Video',
+    icon: './assets/icons/icons8-documentary-128.png',
+    text: 'Video'
+  },
+  {
+    skill: 'Photography',
+    icon: './assets/icons/icons8-camera-128.png',
+    text: 'Photography'
+  }
+]
+
 const clients = [
   {
     client: 'North Fulton Young Life',
