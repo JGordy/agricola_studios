@@ -20,36 +20,40 @@ const profileLinks = [
 const skills = [
   {
     skill: 'Drone',
-    icon: './assets/icons/icons8-drone-96.png',
-    text: 'Drone'
+    icon: './assets/icons/icons8-quadcopter-144.png',
+    text: `Certified Commercial Drone Operator`
   },
   {
     skill: 'Video',
     icon: './assets/icons/icons8-documentary-128.png',
-    text: 'Video'
+    text: 'Shooting - Editing - Audio'
   },
   {
     skill: 'Photography',
     icon: './assets/icons/icons8-camera-128.png',
-    text: 'Photography'
+    text: 'Shooting - Editing'
   }
 ]
 
 const clients = [
   {
     client: 'North Fulton Young Life',
-    url: 'https://northfulton.younglife.org/Pages/Young%20Life%20Committee.aspx'
+    url: 'https://northfulton.younglife.org/Pages/Young%20Life%20Committee.aspx',
+    icon: './assets/icons/clients/GA25_YoungLife_NorthFulton_Horizontal_Color.jpg'
   },
   {
     client: 'Team Airsoft Georgetown',
-    url: 'https://www.teamairsoft.com/'
+    url: 'https://www.teamairsoft.com/',
+    icon: './assets/icons/clients/Team-Airsoft-Logo.png'
   },
   {
     client: 'Creation Ministries International',
-    url: 'https://creation.com/'
+    url: 'https://creation.com/',
+    icon: './assets/icons/clients/Creation-logo-still.png'
   },
-  {
-    client: 'Thunder Bay Video',
-    url: 'http://thunderbayvideo.com'
-  }
+  // {
+  //   client: 'Thunder Bay Video',
+  //   url: 'http://thunderbayvideo.com',
+  //   icon: './assets/icons/clients/thunder-bay.jpg'
+  // }
 ];

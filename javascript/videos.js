@@ -1,6 +1,6 @@
 // YouTube related credentials
-const youTubeChannelId = 'YOUTUBE_CHANNEL_ID';
-const key = 'YOUTUBE_API_KEY';
+const youTubeChannelId = 'UCF6cKDf64M0WFQbL-xfHatQ';
+const key = 'AIzaSyB8AYGycl9nJhp9-aq1azpDdF-b9oZ0FiI';
 let url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${youTubeChannelId}&part=snippet,id&order=date&maxResults=20`;
 
 // Youtube related functionality //
@@ -42,12 +42,12 @@ const createVideoElements = (items) => {
     loadThumbnails();
 }
 
-//The API request to get videos from the channel list
-// const setVideoList = () => {
-//     return fetch(url)
-//       .then(results => results.json())
-//       .then(data => {
-//           createVideoElements(data.items);
-//     });
-// };
+// The API request to get videos from the channel list
+const setVideoList = () => {
+    return fetch(url)
+      .then(results => results.json())
+      .then(data => {
+          createVideoElements(data.items);
+    });
+};
 // setVideoList();
