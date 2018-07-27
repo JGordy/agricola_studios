@@ -1,6 +1,6 @@
 // YouTube related credentials
 const youTubeChannelId = 'UCF6cKDf64M0WFQbL-xfHatQ';
-const key = 'AIzaSyB8AYGycl9nJhp9-aq1azpDdF-b9oZ0FiI';
+const key = 'your-api-key';
 let url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${youTubeChannelId}&part=snippet,id&order=date&maxResults=20`;
 
 // Youtube related functionality //
