@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" href="./styles/mobile.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <title>Agricola Studios</title>
     </head>
@@ -12,30 +13,44 @@
     <body>
 
         <!-- TODO Header - Hero Image, Profile, About Content, Social Links, Navigation -->
-        <header class="header" id="header">
-            <div class="hero">
-                <div class="title-wrapper">
-                    <h2>Kevin Agricola </h2>
-                    <h2 class="pipe">|</h2>
-                    <h4>Agricola Studios</h4>
+        <header class="header" id="about">
+            <div class="hero"></div>
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                  <div id="column-left">
+                      <div class="profile">
+                        <img src="./assets/images/20170809-KevinA-040-profile.jpg" alt="Kevin Agricola" />
+                      </div>
+                      <div id="social-links"></div>
+                      <nav id="menu">
+                      <a href="#about">About</a>
+                      <a href="#skills">Skills</a>
+                      <a href="#work">Work</a>
+                      <a href="#contact">Contact</a>
+                    </nav>
+                  </div>
+                  <div id="column-right">
+                      <div class="title-wrapper">
+                        <h2>Kevin Agricola </h2>
+                        <h2 class="pipe">|</h2>
+                        <h4>Agricola Studios</h4>
+                      </div>
+                      <div class="blurb">
+                    <h1><span class="bold">Hello</span> There</h1>
+                    <p>Founded in 2018, Agricola Studios offers a wide variety of services to help document and create multi-media excellence in video production and photography.<br/><br/>
+
+                      Our staff is led by Kevin Agricola, President and Owner.  Kevin started Agricola Studios out of a lifelong desire to help people document and tell their own story.  Kevin holds a degree of Associate of Applied Science from Chattahoochee Technical College with a specialization in Television Production Technology and FAA Pilot License for Commercial Drone Operation.<br/><br/>
+
+                      His experience includes five years of media and 14 years of service in both customer and non-profit sectors.  Kevin’s years in these sectors have provided a passion for creating high quality videos.  His videos range from commercials for small businesses, non-profit, fund-raising and mission trips.  Kevin’s experience as a Commercial Drone Pilot adds the capability for a dynamic element to be added to your video production and stand out from the noise of today’s media environment.</p>
+                    </div>
+                  </div>
                 </div>
             </div>
 
-            <div class="profile">
-                <img src="./assets/images/20170809-KevinA-040-profile.jpg" alt="Kevin Agricola" />
-            </div>
-            <div class="blurb">
-                <h1><span class="bold">Hello</span> There</h1>
-                <p>Founded in 2018, Agricola Studios offers a wide variety of services to help document and create multi-media excellence in video production and photography.<br/><br/>
-
-                Our staff is led by Kevin Agricola, President and Owner.  Kevin started Agricola Studios out of a lifelong desire to help people document and tell their own story.  Kevin holds a degree of Associate of Applied Science from Chattahoochee Technical College with a specialization in Television Production Technology and FAA Pilot License for Commercial Drone Operation.<br/><br/>
-
-                His experience includes five years of media and 14 years of service in both customer and non-profit sectors.  Kevin’s years in these sectors have provided a passion for creating high quality videos.  His videos range from commercials for small businesses, non-profit, fund-raising and mission trips.  Kevin’s experience as a Commercial Drone Pilot adds the capability for a dynamic element to be added to your video production and stand out from the noise of today’s media environment.</p>
-            </div>
         </header>
 
         <section class="section quote">
-            <h2>"The true sign of intelligence is not knowledge but imagination."</h2>
+            <h2 id="company-quote">"The true sign of intelligence is not knowledge but imagination."</h2>
             <h3 id="cite">Albert <span class="bold">Einstein</span></h3>
         </section>
 
@@ -54,11 +69,24 @@
         </section>
 
         <!-- TODO Contact - Icons w/ Email, Phone, Location - Social Links -->
-        <footer class="footer" id="footer">
+        <footer class="footer" id="contact">
             <h2>Contact</h2>
             <div class="contact-wrapper">
                 <div class="email-wrapper">
-
+                    <div class="contact-links">
+                        <p>by email</p>
+                        <a href="mailto:kevin.agricola@gmail.com">
+                            kevin.agricola@gmail.com
+                        </a>
+                        <p>by phone</p>
+                        <a href="tel:+4046415876">
+                            (404) 641 5876
+                        </a>
+                    </div>
+                    <div class="social-footer">
+                        <h4>social media</h4>
+                        <div id="social-footer"></div>
+                    </div>
                 </div>
                 <div id="map"></div>
             </div>
