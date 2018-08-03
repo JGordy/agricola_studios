@@ -124,9 +124,11 @@ header h2 {
 }
 
 .social-icon a:hover {
-  background-color: var(--light-text-color);
+  /* background-color: var(--light-text-color); */
+  background-color: var(--light-teal);
   border-radius: 3px;
   color: var(--dark-section-bg);
+  transform: scale(1.2);
 }
 
 .social-icon i {
@@ -436,9 +438,9 @@ footer {
 .email-wrapper {
   display: flex;
   justify-content: space-between;
-  height: 225px;
-  width: 450px;
-  /* border: 1px solid white; */
+  flex-basis: 30%;
+  /* height: 225px; */
+  /* width: 450px; */
 }
 
 .contact-links p {
@@ -448,19 +450,29 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+.contact-links p i {
+  color: var(--light-teal);
+}
+
 .contact-links a {
-  border-bottom: 2px solid var(--medium-text-color);
+  /* border-bottom: 2px solid var(--medium-text-color); */
   color: var(--light-text-color);
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 1.75rem;
   letter-spacing: 0.1rem;
   padding-bottom: 0.5rem;
   text-decoration: none;
+  transition: all 0.3s;
+}
+
+.contact-links a:hover {
+  opacity: 0.7;
 }
 
 .social-footer {
-  flex-basis: 10%;
+  /* flex-basis: 10%; */
+  margin-right: 4rem;
 }
 
 .social-footer h4 {
@@ -478,9 +490,10 @@ footer {
 }
 
 #map {
-  height: 225px;
-  width: 450px;
+  height: auto;
+  flex-basis: 45%;
   border-radius: 15px;
+  text-align: center;
 }
 
 #map img {
