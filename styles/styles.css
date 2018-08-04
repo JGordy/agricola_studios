@@ -124,10 +124,10 @@ header h2 {
 }
 
 .social-icon a:hover {
-  /* background-color: var(--light-text-color); */
-  background-color: var(--light-teal);
+  /* background-color: var(--light-teal); */
   border-radius: 3px;
   color: var(--dark-section-bg);
+  color: var(--light-teal);
   transform: scale(1.2);
 }
 
@@ -471,7 +471,7 @@ footer {
 }
 
 .social-footer {
-  /* flex-basis: 10%; */
+  flex-basis: 10%;
   margin-right: 4rem;
 }
 
@@ -483,10 +483,24 @@ footer {
   text-align: center;
 }
 
+.social-footer h4 i {
+  color: var(--light-teal);
+}
+
+.social-footer .social-icon a {
+  font-size: 1.75rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.social-footer .social-icon a:hover {
+  transform: scale(1.1);
+}
+
 #social-footer {
   display: flex;
   justify-content: center;
-  /* flex-flow: row wrap; */
+  flex-flow: row wrap;
 }
 
 #map {
