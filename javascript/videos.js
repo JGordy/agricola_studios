@@ -1,6 +1,6 @@
 // YouTube related credentials
 const youTubeChannelId = 'UCF6cKDf64M0WFQbL-xfHatQ';
-const key = 'your-api-key';
+const key = 'AIzaSyB8AYGycl9nJhp9-aq1azpDdF-b9oZ0FiI';
 let url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${youTubeChannelId}&part=snippet,id&order=date&maxResults=20`;
 
 // Youtube related functionality //
@@ -40,7 +40,7 @@ const createVideoElements = (items) => {
     });
 
     loadThumbnails();
-}
+};
 
 // The API request to get videos from the channel list
 const setVideoList = () => {
@@ -50,4 +50,5 @@ const setVideoList = () => {
           createVideoElements(data.items);
     });
 };
-// setVideoList();
+// NOTE uncomment the function call to load the youtube video list
+setVideoList();

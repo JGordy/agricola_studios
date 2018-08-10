@@ -24,17 +24,17 @@ const profileLinks = [
 const skills = [
   {
     skill: 'Drone',
-    icon: './assets/icons/icons8-quadcopter-144.png',
+    icon: './assets/icons/icons8-quadcopter-250.png',
     text: `Certified Commercial Drone Operator`
   },
   {
     skill: 'Video',
-    icon: './assets/icons/icons8-documentary-128.png',
+    icon: './assets/icons/icons8-documentary-250.png',
     text: 'Shooting - Editing - Audio'
   },
   {
     skill: 'Photography',
-    icon: './assets/icons/icons8-camera-128-white.png',
+    icon: './assets/icons/icons8-camera-250.png',
     text: 'Shooting - Editing'
   }
 ]
