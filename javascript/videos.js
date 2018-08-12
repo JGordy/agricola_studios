@@ -1,4 +1,56 @@
-// YouTube related credentials
+// Youtube creds for background hero video
+let tag = document.createElement('script');
+
+tag.src = 'https://www.youtube.com/player_api';
+
+let firstScriptTag = document.getElementsByTagName('script')[0];
+
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function loadImage() {
+  let imageWrapper = document.getElementById('video-image-wrapper');
+  let video = document.getElementById('muteYouTubeVideoPlayer');
+  let heroImage = document.createElement('div');
+      heroImage.id = "image";
+      heroImage.className = "hero";
+      imageWrapper.replaceChild(heroImage, video);
+};
+
+function onYouTubeIframeAPIReady() {
+ let player;
+ player = new YT.Player('muteYouTubeVideoPlayer', {
+   videoId: 'QQHkBFLH6rA',        // YouTube Video ID
+   width: window.innerWidth,           // Player width (in px)
+   height: window.innerHeight * .6,    // Player height (in px)
+   playerVars: {
+     autoplay: 1,                 // Auto-play the video on load
+     controls: 0,                 // Show pause/play buttons in player
+     showinfo: 0,                 // Hide the video title
+     modestbranding: 1,           // Hide the Youtube Logo
+     disablekb: 1,
+     loop: 1,                     // Run the video in a loop
+     fs: 1,                       // Hide the full screen button
+     cc_load_policy: 1,           // Hide closed captions
+     iv_load_policy: 1,           // Hide the Video Annotations
+     autohide: 0,                 // Hide video controls when playing
+     end: 32,                     // End the video at a specific second mark
+     rel: 0,
+   },
+   events: {
+     onReady: function(e) {
+       e.target.mute();
+     },
+     onStateChange: function(e) {
+       if (e.data === 0) {
+         loadImage();
+       }
+     }
+   }
+ });
+}
+
+
+// YouTube related credentials for the work section
 const youTubeChannelId = 'UCF6cKDf64M0WFQbL-xfHatQ';
 const key = 'AIzaSyB8AYGycl9nJhp9-aq1azpDdF-b9oZ0FiI';
 let url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${youTubeChannelId}&part=snippet,id&order=date&maxResults=20`;
@@ -47,8 +99,9 @@ const setVideoList = () => {
     return fetch(url)
       .then(results => results.json())
       .then(data => {
+          console.log(data);
           createVideoElements(data.items);
     });
 };
 // NOTE uncomment the function call to load the youtube video list
-setVideoList();
+// setVideoList();

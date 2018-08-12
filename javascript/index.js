@@ -68,3 +68,9 @@ function handleScroll() {
 }
 
 addSocialLinks("social-footer");
+
+const isMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+console.log("Mobile? ", isMobile());
+if (isMobile) {
+  /* your code here */
+}
