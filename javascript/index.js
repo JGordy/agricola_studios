@@ -1,6 +1,17 @@
 // Declaring global variables
 let skillsWrapper = document.getElementById('skills-wrapper'),
-    clientLinks = document.getElementById('client-links');
+    clientLinks = document.getElementById('client-links'),
+    headerCTA = document.getElementById('header-cta');
+
+const isMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (isMobile()) {
+    headerCTA.href = "tel:+4046415876";
+    headerCTA.textContent = "Call for pricing";
+} else {
+    headerCTA.href = "mailto:kevin.agricola@gmail.com";
+    headerCTA.textContent = "Email for pricing";
+}
 
 function addSocialLinks(id) {
   let container = document.getElementById(id);
@@ -49,10 +60,19 @@ $('a').click(function(){
 window.onscroll = function() {handleScroll()};
 
 function handleScroll() {
+    let stickyHeader = document.getElementsByClassName('sticky-header')[0],
+        topButton = document.getElementById('top-button');
+
+    if (document.body.scrollTop < 450 || document.documentElement.scrollTop < 450) {
+        stickyHeader.className = "sticky-header";
+        topButton.className = "";
+    }
     // Slides the quote into view
     if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
         document.getElementById("company-quote").className = "slideUp";
         document.getElementById('cite').className = "slideUp";
+        stickyHeader.className = "sticky-header show";
+        topButton.className = "show";
     }
     // Slides the skills columns into view
     if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
@@ -68,9 +88,3 @@ function handleScroll() {
 }
 
 addSocialLinks("social-footer");
-
-const isMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-console.log("Mobile? ", isMobile());
-if (isMobile) {
-  /* your code here */
-}

@@ -104,4 +104,4 @@ const setVideoList = () => {
     });
 };
 // NOTE uncomment the function call to load the youtube video list
-// setVideoList();
+setVideoList();
