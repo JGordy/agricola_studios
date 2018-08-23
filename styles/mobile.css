@@ -1,16 +1,172 @@
 @media screen and (max-width: 767px) {
-/* TODO all mobile styling */
+
+/* Sticky Header Section Styling */
+.agricola-logo {
+  flex-basis: 45%;
+  margin-left: 1rem;
+}
+
+.agricola-logo img {
+  width: 100%;
+}
+
+#sticky-menu {
+  display: none;
+}
+
+.header-cta-wrapper {
+  flex-basis: 45%;
+  margin-right: 1rem;
+  /* margin-right: 0; */
+}
+
+#header-cta {
+  font-size: 0.75rem;
+}
+
+#header-cta {
+  border-color: transparent;
+  color: var(--darkest-section-bg);
+}
 
 /* Header Section Styling */
+header {
+  /* background: linear-gradient(transparent 93%, var(--light-teal)); */
+}
 
+.hero#image {
+  /* height: 100vh; */
+  background-position: bottom;
+}
+
+.hero-wrapper {
+  margin: -5.25rem 0 0;
+  position: relative;
+}
+
+.hero-content {
+  flex-direction: column;
+}
+
+#column-right {
+  flex-basis: 100%;
+}
+
+.blurb {
+  padding: 0;
+}
+
+.blurb h1 {
+  font-size: 2.2rem;
+}
+
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#social-links a {
+  color: var(--darkest-section-bg);
+}
+
+#social-links a,
+#header-cta,
+#top-button {
+  /* border-radius: 3px; */
+  /* background-color: var(--test-blue-1); */
+  /* background-color: var(--test-blue-2); */
+  /* background-color: var(--test-blue-3); */
+  /* background-color: var(--test-blue-4); */
+  /* background-color: var(--test-blue-5); */
+  /* background-color: var(--test-blue-7); */
+  /* background-color: var(--test-blue-10); */
+  /* background-color: var(--test-blue-13); */
+  /* background-color: var(--test-red-1); */
+  /* background-color: var(--test-red-2); */
+  /* background-color: var(--test-red-4); */
+  /* background-color: var(--test-red-7); */
+  /* background-color: var(--test-red-9); */
+  /* background-color: var(--test-red-10); */
+
+  /* background-color: var(--test-teal-6); */
+  background-color: var(--light-teal);
+}
+.skill-text {
+  /* color: var(--test-blue-1); */
+  /* color: var(--test-blue-2); */
+  /* color: var(--test-blue-3); */
+  /* color: var(--test-blue-4); */
+  /* color: var(--test-blue-5); */
+  /* color: var(--test-blue-7); */
+  /* color: var(--test-blue-10); */
+  /* color: var(--test-blue-13); */
+  /* color: var(--test-red-1); */
+  /* color: var(--test-red-2); */
+  /* color: var(--test-red-4); */
+  /* color: var(--test-red-7); */
+  /* color: var(--test-red-9); */
+  /* color: var(--test-red-10); */
+
+  /* color: var(--test-teal-6); */
+  color: var(--light-teal);
+}
+
+.title-wrapper {
+  display: none;
+}
 
 /* Quote Section Styling */
+.section.quote {
+  background-color: var(--light-teal);
+  box-shadow: 0px 0px 25px 5px var(--light-teal);
+  margin-top: 0;
+  z-index: 2;
+}
 
+.quote h2 {
+  color: var(--darkest-section-bg);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+#cite {
+  color: var(--darkest-section-bg);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
 
 /* Services Section Styling */
+#skills-wrapper {
+  flex-direction: column;
+}
 
+#skills-wrapper div {
+  margin-bottom: 2rem;
+}
 
 /* Work Section Styling */
+.section#videos {
+  min-height: 10rem;
+}
+
+#videos-wrapper {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.youtube-player {
+  flex: 0 0 92%;
+  height: 12rem;
+  padding: 0;
+  /* overflow: visible; */
+}
 
 
 /* Client Section Styling */
@@ -18,5 +174,62 @@
 
 /* Footer Section Styling */
 
+  footer {
+    padding: 2rem 3rem;
+  }
 
-};
+  .let-us-help {
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 2rem auto;
+    width: 90%;
+  }
+
+  .contact-wrapper {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .email-wrapper {
+    margin: 2rem 0rem;
+    /* text-align: center; */
+    width: 60%
+  }
+
+  .contact-links a {
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+  }
+
+  .social-footer {
+    flex-basis: 25%;
+    margin-right: 0;
+  }
+
+  .social-footer .social-icon a {
+    margin: 0.5rem;
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+
+  #map {
+    display: none;
+  }
+
+  #lion-logo {
+    margin: 3rem auto 0rem;
+    width: 65%;
+  }
+
+  #top-button {
+    /* background-color: var(--darkest-section-bg); */
+    border-top-left-radius: 5px;
+    right: 0;
+  }
+
+  #top-button i {
+    color: var(--light-text-color); /* for dark backgrounds */
+    color: var(--darkest-section-bg); /* for light backgrounds */
+  }
+
+}

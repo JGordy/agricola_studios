@@ -11,4 +11,4 @@ function embedMap() {
 };
 
 // NOTE comment out when we want to send map requests. Only get 300 free/month
-embedMap();
+// embedMap();

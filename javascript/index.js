@@ -1,19 +1,52 @@
 // Declaring global variables
 let skillsWrapper = document.getElementById('skills-wrapper'),
-    clientLinks = document.getElementById('client-links'),
-    headerCTA = document.getElementById('header-cta');
+    clientLinks = document.getElementById('client-links');
 
-const isMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+// Changing the CTA in the sticky header based on mobile
+function renderHeaderCTA() {
+  let stickyHeaderCTA = document.getElementById('header-cta');
+  if (isMobile()) {
+      stickyHeaderCTA.href = "tel:+4046415876";
+      stickyHeaderCTA.textContent = "Call for pricing";
+  } else {
+      stickyHeaderCTA.href = "mailto:kevin.agricola@gmail.com";
+      stickyHeaderCTA.textContent = "Email for pricing";
+  };
+};
+renderHeaderCTA();
 
-if (isMobile()) {
-    headerCTA.href = "tel:+4046415876";
-    headerCTA.textContent = "Call for pricing";
-} else {
-    headerCTA.href = "mailto:kevin.agricola@gmail.com";
-    headerCTA.textContent = "Email for pricing";
-}
+function renderMenuItems(id) {
+  let menu = document.getElementById(id);
 
-function addSocialLinks(id) {
+  navLinks.forEach(index => {
+    menu.innerHTML +=
+    `<a href=${index.href}>${index.text}</a>`
+  })
+};
+if (!isMobile()) {
+  renderMenuItems("menu");
+  renderMenuItems("sticky-menu");
+};
+
+function renderStoryCopy() {
+  let blurb = document.getElementById('blurb'),
+      storyWrapper = document.createElement('div');
+
+  storyWrapper.id = 'story';
+
+  blurb.innerHTML =
+  `<h1><span class="bold">Hello</span> There</h1>`;
+
+  blurb.appendChild(storyWrapper);
+
+  story.forEach(index => {
+      storyWrapper.innerHTML +=
+      `<p>${index}</p>`;
+  })
+};
+if (!isMobile()) renderStoryCopy();
+
+function renderSocialLinks(id) {
   let container = document.getElementById(id);
 
   profileLinks.forEach(index => {
@@ -25,40 +58,34 @@ function addSocialLinks(id) {
      </div>`
   })
 };
-addSocialLinks("social-links");
+renderSocialLinks("social-links");
 
+function renderServices() {
+  for (var i = 0; i < skills.length; i++) {
+      skillsWrapper.innerHTML +=
+       `<div class="skill">
+            <img class="skill-icons" src="${skills[i].icon}" alt="${skills[i].skill}"/>
+            <h4 class="skill-header">${skills[i].skill}</h4>
+            <p class="skill-text">${skills[i].text}</p>
+        </div>`;
+  };
+}
+renderServices();
 
-// Adds the skill columns with icons and description
-for (var i = 0; i < skills.length; i++) {
-    skillsWrapper.innerHTML +=
-     `<div class="skill">
-          <img class="skill-icons" src="${skills[i].icon}" alt="${skills[i].skill}"/>
-          <h4 class="skill-header">${skills[i].skill}</h4>
-          <p class="skill-text">${skills[i].text}</p>
-      </div>`;
-};
-
-// Adds client links to skills section
-for (var i = 0; i < clients.length; i++) {
-    clientLinks.innerHTML +=
-    `<div class="client-wrapper">
-        <a href="${clients[i].url}" target="_blank">
-            <img class="client-image" src="${clients[i].icon}" alt="${clients[i].client}"/>
-        </a>
-     </div>`
-};
-
-// Smooth scrolling jquery function for navigation
-$('a').click(function(){
-  $('html, body').animate({
-    scrollTop: $( $(this).attr('href') ).offset().top
-  }, 750);
-  return false;
-});
+function renderClientLinks() {
+  for (var i = 0; i < clients.length; i++) {
+      clientLinks.innerHTML +=
+      `<div class="client-wrapper">
+          <a href="${clients[i].url}" target="_blank">
+              <img class="client-image" src="${clients[i].icon}" alt="${clients[i].client}"/>
+          </a>
+       </div>`
+  };
+}
+renderClientLinks();
 
 // Handles adding a classname to an element when the screen is scrolled up a certain distance
 window.onscroll = function() {handleScroll()};
-
 function handleScroll() {
     let stickyHeader = document.getElementsByClassName('sticky-header')[0],
         topButton = document.getElementById('top-button');
@@ -76,15 +103,32 @@ function handleScroll() {
     }
     // Slides the skills columns into view
     if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-        let skills = skillsWrapper.childNodes;
-        let i = skills.length;
+        let skills = skillsWrapper.childNodes,
+            delay = 1;
 
-        while(i--) {
-          skills[i].style.transition = `all 1.${i * 4}s`;
+        for (let i = 0; i < skills.length; i++) {
+          skills[i].style.transition = `all ${delay}s`;
           skills[i].className = "slideUp";
+          delay += 0.5;
         }
 
     }
 }
 
-addSocialLinks("social-footer");
+renderSocialLinks("social-footer");
+
+function renderContactLinks(id) {
+  let footer = document.getElementById(id);
+
+  contactLinks.forEach(index => {
+    footer.innerHTML +=
+    `<p>
+        <i class="${index.icon}"></i>
+        ${index.label}
+     </p>
+     <a href=${index.href}>
+          ${index.text}
+     </a>`;
+  })
+};
+renderContactLinks("contact-links");

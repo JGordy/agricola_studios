@@ -15,6 +15,25 @@
   --highlight-color:    #B72729;
   --light-teal:         #55f5cd;
 
+  /* Testing highlight colors */
+  --test-blue-1: #08415C;
+  --test-blue-2: #3A506B;
+  --test-blue-3: #3D5A80;
+  --test-blue-4: #007EA7;
+  --test-blue-5: #027BCE;
+  --test-blue-7: #016FB9; /* * */
+  --test-blue-10: #004777; /* * */
+  --test-blue-13: #1C5D99; /* * */
+
+  --test-red-1: #CC2936;
+  --test-red-2: #F71735;
+  --test-red-4: #D62828;
+  --test-red-7: #BA3F1D;
+  --test-red-9: #A22522;
+  --test-red-10: #A30000; /* * */
+
+  --test-teal-6: #22AED1; /* * */
+
   /* Fonts */
   --custom-font: 'American Captain';
 }
@@ -46,6 +65,7 @@ header h2 {
   text-align: center;
   color: var(--light-text-color);
   font-weight: 200;
+  font-size: 36px;
   text-transform: uppercase;
 }
 
@@ -53,7 +73,7 @@ header h2 {
   font-weight: bold;
 }
 
-/* Header Section Styling */
+/* Sticky Header Section Styling */
 
 .sticky-header {
   align-items: center;
@@ -61,7 +81,7 @@ header h2 {
   display: flex;
   height: 5rem;
   justify-content: space-between;
-  /* padding: 0rem 1rem; */
+  justify-content: center;
   position: fixed;
   transform: translateY(-100%);
   transition: all 0.5s;
@@ -75,21 +95,48 @@ header h2 {
 }
 
 .agricola-logo {
-  flex-basis: 25%;
+  flex-basis: 33%;
   margin-left: 2rem;
 }
 
 .agricola-logo img {
-  width: 100%;
+  width: 60%;
+}
+
+#sticky-menu {
+  flex-basis: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+#sticky-menu a {
+  background-color: rgba(255,255,255,0);
+  border-radius: 3px;
+  color: var(--light-text-color);
+  padding: 0.3rem 0.55rem;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+#sticky-menu a:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+
+.header-cta-wrapper {
+  flex-basis: 33%;
+  margin-right: 2rem;
+  text-align: right;
 }
 
 #header-cta {
   border: 2px solid var(--light-text-color);
   border-radius: 3px;
   color: var(--light-text-color);
-  margin-right: 2rem;
+  font-size: 18px;
+  letter-spacing: 1px;
   padding: 0.5rem 1rem;
   text-decoration: none;
+  text-align: center;
   transition: all 0.3s;
 }
 
@@ -97,6 +144,8 @@ header h2 {
   background-color: var(--light-text-color);
   color: var(--darkest-section-bg);
 }
+
+/* Header Section Styling */
 
 .header {
   min-height: 120vh;
@@ -308,22 +357,31 @@ iframe {
 }
 
 .blurb h1 {
+  color: var(--darkest-section-bg);
   font-weight: lighter;
   font-size: 3rem;
   margin-bottom: 2rem;
 }
 
+#story p {
+  margin: 0.75rem 0rem;
+}
+
 /* Quote Section Styling */
 
 .section.quote {
+  align-items: center;
   background-color: var(--medium-section-bg);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   min-height: 12vh;
   margin-top: 3rem;
 }
 
 #cite, #company-quote {
   opacity: 0;
-  transform: translateY(50%);
+  transform: translateY(150%);
   transition: all 0.75s;
 }
 
@@ -334,18 +392,20 @@ iframe {
 
 .quote h2 {
   font-style: italic;
+  font-size: 24px;
   text-transform: none;
 }
 
 #cite {
-  margin-top: 2rem;
-  margin-right: 7rem;
-  text-align: right;
+  font-size: 18px;
+  margin-top: 1rem;
+  /* margin-right: 7rem; */
+  text-align: center;
 }
 
 /* Skills Section Styling */
 
-.section#skills,
+.section#services,
 footer {
   background-color: var(--dark-section-bg);
   padding: 3rem 0;
@@ -392,9 +452,9 @@ footer {
   text-align: center;
 }
 
-/* Work Section Styling */
+/* Videos Section Styling */
 
-.section#work {
+.section#videos {
   background: var(--bg-texture);
   background-repeat: repeat;
   padding: 4rem 0rem;
@@ -414,7 +474,7 @@ footer {
     /* padding-bottom: 56.23%; */
     padding-bottom: 18%;
     /* Use 75% for 4:3 videos ? */
-    height: 0;
+    height: 80%;
     overflow: hidden;
     max-width: 100%;
     background: #000;
@@ -461,8 +521,8 @@ footer {
     -moz-transition: .25s all;
     transition: .25s all;
 
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    /* -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); */
 }
 
 .youtube-player .play {
@@ -518,19 +578,19 @@ footer {
   height: auto;
 }
 
-.clients p {
-  color: var(--light-text-color);
-  font-size: 1.25rem;
-  line-height: 2rem;
-  margin: 1rem auto 3rem;
-  text-align: center;
-  width: 70%;
-}
-
 /* Footer Section Styling */
 
 footer {
-  /* background-color: var(--darkest-section-bg); */
+  padding: 2rem 4rem;
+}
+
+.let-us-help {
+ color: var(--light-text-color);
+ font-size: 1.25rem;
+ line-height: 2rem;
+ margin: 1rem auto 3rem;
+ text-align: center;
+ width: 70%;
 }
 
 .contact-wrapper {
@@ -543,8 +603,6 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-basis: 30%;
-  /* height: 225px; */
-  /* width: 450px; */
 }
 
 .contact-links p {
@@ -620,7 +678,7 @@ footer {
 
 #lion-logo {
   margin: 2rem auto 2rem;
-  width: 25%;
+  width: 22%;
 }
 
 #lion-logo img {

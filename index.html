@@ -2,9 +2,14 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-        <link rel="stylesheet" href="./styles/styles.css">
+
+        <link rel="stylesheet" href="./styles/main.css">
+
         <link rel="stylesheet" href="./styles/mobile.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <title>Agricola Studios</title>
@@ -12,17 +17,18 @@
 
     <body>
         <div class="sticky-header">
-          <div class="agricola-logo">
-              <img src="./assets/images/com/Deliver/AgricolaStudiosText-WHT.png" alt="Agricola Studios Logo">
-          </div>
-          <a class="btn" id="header-cta"></a>
+            <div class="agricola-logo">
+                <img src="./assets/images/com/Deliver/AgricolaStudiosText-WHT.png" alt="Agricola Studios Logo">
+            </div>
+            <div id="sticky-menu"></div>
+            <div class="header-cta-wrapper">
+              <a class="btn" id="header-cta"></a>
+            </div>
         </div>
 
         <header class="header" id="about">
-            <!-- <div class="hero"></div> -->
             <div id="video-image-wrapper">
-                <div class="hero" id="muteYouTubeVideoPlayer">
-            </div>
+                <div class="hero" id="muteYouTubeVideoPlayer"></div>
             </div>
 
             <div class="hero-wrapper">
@@ -32,12 +38,7 @@
                             <img src="./assets/images/20170809-KevinA-039-profile.jpg" alt="Kevin Agricola" />
                         </div>
                         <div id="social-links"></div>
-                        <nav id="menu">
-                        <a href="#about">About</a>
-                        <a href="#skills">Services</a>
-                        <a href="#work">Videos</a>
-                        <a href="#contact">Contact</a>
-                      </nav>
+                        <nav id="menu"></nav>
                     </div>
 
                     <div id="column-right">
@@ -46,16 +47,7 @@
                             <h2 class="pipe">|</h2>
                             <h4>Agricola <span>Studios LLC</span></h4>
                         </div>
-                        <div class="blurb">
-                            <h1><span class="bold">Hello</span> There</h1>
-                            <p>
-                                Founded in 2018, Agricola Studios offers a wide variety of services to help document and create multi-media excellence in video production and photography.<br/><br/>
-
-                                Our staff is led by Kevin Agricola, President and Owner.  Kevin started Agricola Studios out of a lifelong desire to help people document and tell their own story.  Kevin holds a degree of Associate of Applied Science from Chattahoochee Technical College with a specialization in Television Production Technology and FAA Pilot License for Commercial Drone Operation.<br/><br/>
-
-                                His experience includes five years of media and 14 years of service in both customer and non-profit sectors.  Kevin’s years in these sectors have provided a passion for creating high quality videos.  His videos range from commercials for small businesses, non-profit, fund-raising and mission trips.  Kevin’s experience as a Commercial Drone Pilot adds the capability for a dynamic element to be added to your video production and stand out from the noise of today’s media environment.
-                            </p>
-                        </div>
+                        <div class="blurb" id="blurb"></div>
                     </div>
 
                 </div>
@@ -70,12 +62,12 @@
             <h3 id="cite">Albert <span class="bold">Einstein</span></h3>
         </section>
 
-        <section class="section" id="skills">
+        <section class="section" id="services">
             <h2>Services</h2>
             <div id="skills-wrapper"></div>
         </section>
 
-        <section class="section" id="work">
+        <section class="section" id="videos">
             <h2>Videos</h2>
             <div id="videos-wrapper"></div>
         </section>
@@ -83,44 +75,20 @@
         <section class="clients" id="clients">
             <h3 class="happy-clients">Some of my happy clients</h3>
             <div id="client-links"></div>
-            <p>
+        </section>
+
+        <footer class="footer" id="contact">
+            <h2>Contact</h2>
+            <p class="let-us-help">
                 Agricola Studios provides a hands-on creative process and development.  All work and production is completed in house.  We pride our work with our clients to utilize all creative elements in balance to create your final result.  Agricola Studios will work with you on competitive pricing for your video production and special event photography needs.<br/><br/>
 
                 <!-- Contact us to schedule your initial consultation.<br/><br/> -->
 
                 Let Agricola Studios help you create your unique story.
             </p>
-        </section>
-
-        <footer class="footer" id="contact">
-            <h2>Contact</h2>
             <div class="contact-wrapper">
                 <div class="email-wrapper">
-                    <div class="contact-links">
-                        <p>
-                          <i class="far fa-envelope"></i>
-                          by email
-                        </p>
-                        <a href="mailto:kevin.agricola@gmail.com">
-                            kevin.agricola@gmail.com
-                        </a>
-                        <p>
-                          <i class="fas fa-mobile-alt"></i>
-                          by phone
-                        </p>
-                        <a href="tel:+4046415876">
-                            (404) 641 5876
-                        </a>
-                        <p>
-                          <i class="fas fa-map-marker-alt"></i>
-                          office
-                        </p>
-                        <a         href="https://www.google.com/search?rlz=1C5CHFA_enUS742US743&q=Thrive+crabapple+GA&npsic=0&rflfq=1&rlha=0&rllag=34121037,-84317854,5456&tbm=lcl&ved=2ahUKEwiQo9OJ49HcAhUEW60KHeLjCfgQtgN6BAgBEAQ&tbs=lrf:!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2&rldoc=1#rlfi=hd:;si:8943253290162805855;mv:!1m3!1d14422.954924706815!2d-84.33052529876596!3d34.081218003388535!3m2!1i1500!2i838!4f13.1"
-                        target="_blank"
-                        >
-                            12540 Broadwell Rd<br/>Suite 2201<br/>
-                            Milton, GA 30004
-                        </a>
+                    <div class="contact-links" id="contact-links">
                     </div>
                 </div>
                 <div class="social-footer">
@@ -129,9 +97,8 @@
                         follow us
                     </h4>
                     <div id="social-footer"></div>
-                    <!-- <img src="./assets/images/com/Deliver/AgricolaStudiosLogo-WHT.png" alt=""> -->
                 </div>
-                <div id="map"></div>
+                <!-- <div id="map"></div> -->
             </div>
             <div id="lion-logo">
                 <img src="./assets/images/com/Deliver/AgricolaStudiosLogo-WHT.png" alt="Agricola Lion Logo">
@@ -144,6 +111,7 @@
         </a>
 
         <script src="./javascript/constants.js"></script>
+        <script src="./javascript/utilities.js"></script>
         <script src="./javascript/index.js"></script>
         <script src="./javascript/videos.js"></script>
         <script src="./javascript/map.js"></script>
