@@ -170,7 +170,18 @@ header {
 
 
 /* Client Section Styling */
+#client-links {
+  justify-content: flex-start;
+  overflow-x: scroll;
+  width: 100%;
+}
 
+.client-wrapper {
+  flex: 0 0 70%;
+  height: auto;
+  max-height: 10rem;
+  padding: 0 1.75rem;
+}
 
 /* Footer Section Styling */
 
@@ -181,8 +192,8 @@ header {
   .let-us-help {
     font-size: 0.9rem;
     text-align: left;
-    margin: 2rem auto;
-    width: 90%;
+    margin: 2rem 0;
+    width: 100%;
   }
 
   .contact-wrapper {
@@ -204,6 +215,16 @@ header {
   .social-footer {
     flex-basis: 25%;
     margin-right: 0;
+  }
+
+  .social-footer h4 {
+    font-weight: 300;
+  }
+
+  .social-footer .social-icon a {
+    /* background-color: var(--light-teal); */
+    /* color: var(--dark-section-bg); */
+    /* color: var(--light-teal); */
   }
 
   .social-footer .social-icon a {
