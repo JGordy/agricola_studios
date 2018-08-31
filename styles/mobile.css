@@ -35,6 +35,7 @@ header {
 }
 
 .hero#image {
+  /* background: url("../assets/images/jon-flobrant-462801-unsplash-mobile.jpg"); */
   /* height: 100vh; */
   background-position: bottom;
 }
