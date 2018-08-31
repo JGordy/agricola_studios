@@ -72,46 +72,44 @@ header {
 }
 
 #social-links a {
+  /* background-color: transparent; */
   color: var(--darkest-section-bg);
+  /* color: white; */
+  font-size: 1.5rem;
+  height: 30px;
+  width: 30px;
+}
+
+#social-links a:hover,
+#social-links a:focus {
+  transform: none;
 }
 
 #social-links a,
 #header-cta,
 #top-button {
   /* border-radius: 3px; */
-  /* background-color: var(--test-blue-1); */
   /* background-color: var(--test-blue-2); */
-  /* background-color: var(--test-blue-3); */
-  /* background-color: var(--test-blue-4); */
-  /* background-color: var(--test-blue-5); */
-  /* background-color: var(--test-blue-7); */
+/* background-color: var(--test-blue-4); */
   /* background-color: var(--test-blue-10); */
-  /* background-color: var(--test-blue-13); */
+/* background-color: var(--test-blue-13); */
+
   /* background-color: var(--test-red-1); */
-  /* background-color: var(--test-red-2); */
-  /* background-color: var(--test-red-4); */
+/* background-color: var(--test-red-4); */
   /* background-color: var(--test-red-7); */
-  /* background-color: var(--test-red-9); */
-  /* background-color: var(--test-red-10); */
 
   /* background-color: var(--test-teal-6); */
   background-color: var(--light-teal);
 }
 .skill-text {
-  /* color: var(--test-blue-1); */
   /* color: var(--test-blue-2); */
-  /* color: var(--test-blue-3); */
   /* color: var(--test-blue-4); */
-  /* color: var(--test-blue-5); */
-  /* color: var(--test-blue-7); */
   /* color: var(--test-blue-10); */
   /* color: var(--test-blue-13); */
+
   /* color: var(--test-red-1); */
-  /* color: var(--test-red-2); */
   /* color: var(--test-red-4); */
   /* color: var(--test-red-7); */
-  /* color: var(--test-red-9); */
-  /* color: var(--test-red-10); */
 
   /* color: var(--test-teal-6); */
   color: var(--light-teal);

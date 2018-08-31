@@ -6,7 +6,7 @@
   --medium-section-bg:  #626365;
   --dark-section-bg:    #393E42;
   --darkest-section-bg: #171717;
-  --bg-texture:         url('../assets/images/concrete_wall_@2x.png');
+  --bg-texture:      url('../assets/images/concrete_wall_@2x.png');
 
   /* Text colors */
   --light-text-color:   #ECF0F2;
@@ -455,7 +455,7 @@ footer {
 /* Videos Section Styling */
 
 .section#videos {
-  background: var(--bg-texture);
+  background: var(--bg-texture), var(--dark-section-bg);
   background-repeat: repeat;
   padding: 4rem 0rem;
 }
