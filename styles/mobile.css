@@ -30,14 +30,26 @@
 }
 
 /* Header Section Styling */
-header {
-  /* background: linear-gradient(transparent 93%, var(--light-teal)); */
+.header {
+  min-height: 100vh;
+}
+
+#video-image-wrapper {
+  position: relative;
 }
 
 .hero#image {
   /* background: url("../assets/images/jon-flobrant-462801-unsplash-mobile.jpg"); */
-  /* height: 100vh; */
   background-position: bottom;
+}
+
+#hero-logo {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  z-index: 5;
+  width: 80%;
+  margin: 0 2.3rem;
 }
 
 .hero-wrapper {
@@ -47,6 +59,7 @@ header {
 
 .hero-content {
   flex-direction: column;
+  width: 100%;
 }
 
 #column-right {
@@ -67,12 +80,16 @@ header {
 }
 
 .profile img {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
 }
 
+#social-links {
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
 #social-links a {
-  /* background-color: transparent; */
   color: var(--darkest-section-bg);
   /* color: white; */
   font-size: 1.5rem;
@@ -116,7 +133,68 @@ header {
 }
 
 .title-wrapper {
+  margin: 0;
+  justify-content: center;
+}
+
+.title-wrapper .pipe,
+.title-wrapper h4 {
   display: none;
+}
+
+.title-wrapper h2 {
+  font-size: 1.5rem;
+  color: var(--dark-section-bg);
+}
+
+.mobile-read-more {
+  display: block;
+}
+
+.mobile-read-more .collapsible {
+  background-color: var(--light-section-bg);
+  border: 4px solid var(--medium-section-bg);
+  /* border-radius:  */
+  color: var(--text-color);
+  cursor: pointer;
+  display: block;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  outline: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 70%;
+}
+
+.mobile-read-more .active, .mobile-read-more .collapsible:focus {
+  background-color: var(--light-section-bg);
+}
+
+.mobile-read-more .content {
+  padding: 0 1rem;
+  max-height: 0rem;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--light-section-bg);
+}
+
+.mobile-read-more p {
+  line-height: 1.2rem;
+  margin: 0.75rem 0rem;
+}
+
+.mobile-read-more .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: var(--light-text-color) !important;
+    float: right;
+    margin-left: 5px;
+}
+
+.mobile-read-more .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* Quote Section Styling */
@@ -169,7 +247,6 @@ header {
   /* overflow: visible; */
 }
 
-
 /* Client Section Styling */
 #client-links {
   justify-content: flex-start;
@@ -206,6 +283,10 @@ header {
     margin: 2rem 0rem;
     /* text-align: center; */
     width: 60%
+  }
+
+  .conact-links p {
+    font-weight: normal;
   }
 
   .contact-links a {

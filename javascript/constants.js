@@ -41,7 +41,7 @@ const profileLinks = [
 ];
 
 const story = [
-  "Founded in 2018, Agricola Studios offers a wide variety of services   to help document and create multi-media excellence in video production and photography.Our staff is led by Kevin Agricola, President and Owner.",
+  "Founded in 2018, Agricola Studios offers a wide variety of services to help document and create multi-media excellence in video production and photography. Our staff is led by Kevin Agricola, President and Owner.",
 
   "Kevin started Agricola Studios out of a lifelong desire to help people document and tell their own story.  Kevin holds a degree of Associate of Applied Science from Chattahoochee Technical College with a specialization in Television Production Technology and FAA Pilot License for Commercial Drone Operation.",
 

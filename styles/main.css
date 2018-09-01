@@ -1,4 +1,7 @@
-/* Start out with the custom css variables for the background sections */
+/*
+*
+*  Site wide css variables
+*/
 
 :root {
   /* Background colors */
@@ -6,7 +9,7 @@
   --medium-section-bg:  #626365;
   --dark-section-bg:    #393E42;
   --darkest-section-bg: #171717;
-  --bg-texture:      url('../assets/images/concrete_wall_@2x.png');
+  --bg-texture:      url('../assets/images/concrete_wall_2X.png');
 
   /* Text colors */
   --light-text-color:   #ECF0F2;
@@ -73,7 +76,10 @@ header h2 {
   font-weight: bold;
 }
 
-/* Sticky Header Section Styling */
+/*
+*
+*  Sticky Header Section Styling
+*/
 
 .sticky-header {
   align-items: center;
@@ -145,17 +151,20 @@ header h2 {
   color: var(--darkest-section-bg);
 }
 
-/* Header Section Styling */
+/*
+*
+*  Header Section Styling
+*/
 
 .header {
   min-height: 120vh;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 
 .hero {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
 }
 
 .hero#image {
@@ -165,6 +174,10 @@ header h2 {
   background-position: center 65%;
   width: 100%;
   height: 60vh;
+}
+
+#hero-logo {
+  display: none;
 }
 
 .hero#muteYouTubeVideoPlayer {
@@ -322,7 +335,7 @@ iframe {
 }
 
 .title-wrapper {
-  color: white;
+  color: var(--light-text-color);
   display: flex;
   font-size: 1.25rem;
   margin: 3rem 0rem 6rem;
@@ -363,15 +376,24 @@ iframe {
   margin-bottom: 2rem;
 }
 
-#story p {
+.blurb p {
   margin: 0.75rem 0rem;
 }
 
-/* Quote Section Styling */
+.mobile-read-more {
+  display: none;
+}
+
+/*
+*
+*  Quote Section Styling
+*/
 
 .section.quote {
   align-items: center;
   background-color: var(--medium-section-bg);
+  background-color: var(--light-teal);
+  box-shadow: 0px 0px 25px 5px var(--light-teal);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -391,19 +413,24 @@ iframe {
 }
 
 .quote h2 {
+  color: var(--darkest-section-bg);
   font-style: italic;
   font-size: 24px;
   text-transform: none;
 }
 
 #cite {
+  color: var(--darkest-section-bg);
   font-size: 18px;
   margin-top: 1rem;
   /* margin-right: 7rem; */
   text-align: center;
 }
 
-/* Skills Section Styling */
+/*
+*
+*  Skills Section Styling
+*/
 
 .section#services,
 footer {
@@ -452,7 +479,10 @@ footer {
   text-align: center;
 }
 
-/* Videos Section Styling */
+/*
+*
+*  Videos Section Styling
+*/
 
 .section#videos {
   background: var(--bg-texture), var(--dark-section-bg);
@@ -487,11 +517,11 @@ footer {
 .youtube-player:hover,
 .youtube-player:hover img {
   /* NOTE Use if image is in color for hover effect */
-  /* -webkit-filter: brightness(75%); */
+  -webkit-filter: brightness(75%);
 
   /* NOTE use if image is in grayscale */
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+  /* -webkit-filter: grayscale(0%);
+  filter: grayscale(0%); */
 }
 
 .youtube-player iframe {
@@ -537,7 +567,10 @@ footer {
     cursor: pointer;
 }
 
-/* Client Section Styling */
+/*
+*
+*  Client Section Styling
+*/
 
 .clients {
   background-color: var(--dark-section-bg);
@@ -578,7 +611,10 @@ footer {
   height: auto;
 }
 
-/* Footer Section Styling */
+/*
+*
+*  Footer Section Styling
+*/
 
 footer {
   padding: 2rem 4rem;

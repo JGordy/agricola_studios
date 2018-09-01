@@ -29,22 +29,24 @@ if (!isMobile()) {
 };
 
 function renderStoryCopy() {
-  let blurb = document.getElementById('blurb'),
-      storyWrapper = document.createElement('div');
+  let contentWrapper;
 
-  storyWrapper.id = 'story';
-
-  blurb.innerHTML =
-  `<h1><span class="bold">Hello</span> There</h1>`;
-
-  blurb.appendChild(storyWrapper);
+  if (isMobile()) {
+      contentWrapper = document.getElementById('about-founder');
+  } else {
+      contentWrapper = document.getElementById('blurb');
+      contentWrapper.innerHTML =
+      `<h1><span class="bold">Hello</span> There</h1>`;
+  };
 
   story.forEach(index => {
-      storyWrapper.innerHTML +=
+      contentWrapper.innerHTML +=
       `<p>${index}</p>`;
-  })
+  });
+
 };
-if (!isMobile()) renderStoryCopy();
+renderStoryCopy();
+
 
 function renderSocialLinks(id) {
   let container = document.getElementById(id);

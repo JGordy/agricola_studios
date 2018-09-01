@@ -14,18 +14,25 @@ function loadImage() {
       heroImage.id = "image";
       heroImage.className = "hero";
       imageWrapper.replaceChild(heroImage, video);
+      if (isMobile()) {
+        let heroLogo = document.createElement('img');
+        heroLogo.id = "hero-logo";
+        heroLogo.src = './assets/images/com/Deliver/AgricolaStudiosText-WHT.png';
+        heroLogo.alt = 'Agricola Studios Logo'
+        imageWrapper.appendChild(heroLogo);
+      }
 };
 
 function onYouTubeIframeAPIReady() {
   // On mobile, skip the background video and just load the background image
-  // if ( isMobile() ) loadImage();
-  if (true) loadImage();
+  if ( isMobile() ) loadImage();
+  // if (true) loadImage();
 
   let player;
   player = new YT.Player('muteYouTubeVideoPlayer', {
-    videoId: 'QQHkBFLH6rA',           // YouTube Video ID
-    width: window.innerWidth,         // Player width (in px)
-    height: window.innerHeight * .6,  // Player height (in px)
+    videoId: 'QQHkBFLH6rA',        // YouTube Video ID
+    width:  window.innerWidth,     // Player width (in px)
+    height: window.innerHeight * .6,    // Player height (in px)
     playerVars: {
       autoplay: 1,                 // Auto-play the video on load
       controls: 0,                 // Show pause/play buttons in player
@@ -41,11 +48,12 @@ function onYouTubeIframeAPIReady() {
       rel: 0,
     },
     events: {
-      onReady: function(e) {
-        e.target.mute();
+      onReady: function(event) {
+        event.target.mute();
+        event.target.playVideo();
       },
-      onStateChange: function(e) {
-        if (e.data === 0) {
+      onStateChange: function(event) {
+        if (event.data === 0) {
           loadImage();
         }
       }
