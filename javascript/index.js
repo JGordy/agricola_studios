@@ -1,6 +1,7 @@
 // Declaring global variables
 let skillsWrapper = document.getElementById('skills-wrapper'),
-    clientLinks = document.getElementById('client-links');
+    clientLinks = document.getElementById('client-links'),
+    titleWrapper = document.getElementsByClassName('title-wrapper')[0];
 
 // Changing the CTA in the sticky header based on mobile
 function renderHeaderCTA() {

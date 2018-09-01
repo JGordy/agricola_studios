@@ -339,6 +339,8 @@ iframe {
   display: flex;
   font-size: 1.25rem;
   margin: 3rem 0rem 6rem;
+  opacity: 0;
+  transition: all 1s ease;
 }
 
 .title-wrapper .pipe {

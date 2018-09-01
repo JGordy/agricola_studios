@@ -10,6 +10,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 function loadImage() {
   let imageWrapper = document.getElementById('video-image-wrapper');
   let video = document.getElementById('muteYouTubeVideoPlayer');
+  titleWrapper.style.opacity = '1';
   let heroImage = document.createElement('div');
       heroImage.id = "image";
       heroImage.className = "hero";
