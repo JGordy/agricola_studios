@@ -5,85 +5,84 @@ let skillsWrapper = document.getElementById('skills-wrapper'),
 
 // Changing the CTA in the sticky header based on mobile
 function renderHeaderCTA() {
-  let stickyHeaderCTA = document.getElementById('header-cta');
-  if (isMobile()) {
-      stickyHeaderCTA.href = "tel:+4046415876";
-      stickyHeaderCTA.textContent = "Call for pricing";
-  } else {
-      stickyHeaderCTA.href = "mailto:kevin.agricola@gmail.com";
-      stickyHeaderCTA.textContent = "Email for pricing";
-  };
+    let stickyHeaderCTA = document.getElementById('header-cta');
+    if (isMobile()) {
+        stickyHeaderCTA.href = "tel:+4046415876";
+        stickyHeaderCTA.textContent = "Call for pricing";
+    } else {
+        stickyHeaderCTA.href = "mailto:kevin.agricola@gmail.com";
+        stickyHeaderCTA.textContent = "Email for pricing";
+    };
 };
 renderHeaderCTA();
 
 function renderMenuItems(id) {
-  let menu = document.getElementById(id);
-
-  navLinks.forEach(index => {
-    menu.innerHTML +=
-    `<a href=${index.href}>${index.text}</a>`
-  })
+    let menu = document.getElementById(id);
+    navLinks.forEach(index => {
+        menu.innerHTML +=
+        `<a href="${index.href}">${index.text}</a>`
+    })
 };
 if (!isMobile()) {
-  renderMenuItems("menu");
-  renderMenuItems("sticky-menu");
+    renderMenuItems("menu");
+    renderMenuItems("sticky-menu");
 };
 
 function renderStoryCopy() {
-  let contentWrapper;
+    let contentWrapper;
 
-  if (isMobile()) {
-      contentWrapper = document.getElementById('about-founder');
-  } else {
-      contentWrapper = document.getElementById('blurb');
-      contentWrapper.innerHTML =
-      `<h1><span class="bold">Hello</span> There</h1>`;
-  };
+    if (isMobile()) {
+        contentWrapper = document.getElementById('about-founder');
+    } else {
+        contentWrapper = document.getElementById('blurb');
+        contentWrapper.innerHTML =
+        `<h1><span class="bold">Hello</span> There</h1>`;
+    };
 
-  story.forEach(index => {
-      contentWrapper.innerHTML +=
-      `<p>${index}</p>`;
-  });
+    story.forEach(index => {
+        contentWrapper.innerHTML +=
+        `<p>${index}</p>`;
+    });
 
 };
 renderStoryCopy();
 
 
 function renderSocialLinks(id) {
-  let container = document.getElementById(id);
+    let container = document.getElementById(id);
 
-  profileLinks.forEach(index => {
-    container.innerHTML +=
-    `<div class="social-icon">
-        <a href="${index.url}" target="_blank">
-            <i class="${index.className}"></1>
-        </a>
-     </div>`
-  })
+    profileLinks.forEach(index => {
+        container.innerHTML +=
+        `<div class="social-icon">
+            <a href="${index.url}" target="_blank">
+                <i class="${index.className}"></1>
+            </a>
+        </div>`
+    })
 };
 renderSocialLinks("social-links");
 
 function renderServices() {
-  for (var i = 0; i < skills.length; i++) {
-      skillsWrapper.innerHTML +=
-       `<div class="skill">
-            <img class="skill-icons" src="${skills[i].icon}" alt="${skills[i].skill}"/>
-            <h4 class="skill-header">${skills[i].skill}</h4>
-            <p class="skill-text">${skills[i].text}</p>
-        </div>`;
-  };
+    for (var i = 0; i < skills.length; i++) {
+        skillsWrapper.innerHTML +=
+        `<div class="skill">
+                <img class="skill-icons" src="${skills[i].icon}" alt="${skills[i].skill}"/>
+                <h4 class="skill-header">${skills[i].skill}</h4>
+                <p class="skill-text">${skills[i].text}</p>
+            </div>`;
+    };
 }
 renderServices();
 
 function renderClientLinks() {
-  for (var i = 0; i < clients.length; i++) {
-      clientLinks.innerHTML +=
-      `<div class="client-wrapper">
-          <a href="${clients[i].url}" target="_blank">
-              <img class="client-image" src="${clients[i].icon}" alt="${clients[i].client}"/>
-          </a>
-       </div>`
-  };
+    for (var i = 0; i < clients.length; i++) {
+        clientLinks.innerHTML +=
+        `<div class="client-wrapper">
+            <a href="${clients[i].url}" target="_blank">
+                <img class="client-image" src="${clients[i].icon}" alt="${clients[i].client}"/>
+            </a>
+        </div>`
+    };
 }
 renderClientLinks();
 
@@ -110,9 +109,9 @@ function handleScroll() {
             delay = 1;
 
         for (let i = 0; i < skills.length; i++) {
-          skills[i].style.transition = `all ${delay}s`;
-          skills[i].className = "slideUp";
-          delay += 0.5;
+            skills[i].style.transition = `all ${delay}s`;
+            skills[i].className = "slideUp";
+            delay += 0.5;
         }
 
     }
@@ -121,17 +120,17 @@ function handleScroll() {
 renderSocialLinks("social-footer");
 
 function renderContactLinks(id) {
-  let footer = document.getElementById(id);
+    let footer = document.getElementById(id);
 
-  contactLinks.forEach(index => {
+    contactLinks.forEach(index => {
     footer.innerHTML +=
     `<p>
         <i class="${index.icon}"></i>
         ${index.label}
-     </p>
-     <a href=${index.href}>
-          ${index.text}
-     </a>`;
-  })
+        </p>
+        <a href=${index.href}>
+            ${index.text}
+        </a>`;
+    })
 };
 renderContactLinks("contact-links");
