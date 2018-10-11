@@ -97,6 +97,12 @@ const contactLinks = [
     text: "kevin.agricola@agricolastudiosllc.com"
   },
   {
+    icon: "",
+    label: "",
+    href: "mailto:kevin.agricola@gmail.com",
+    text: "kevin.agricola@gmail.com"
+  },
+  {
     icon: "fas fa-mobile-alt",
     label: "by phone",
     href: "tel:+4046415876",
@@ -105,7 +111,8 @@ const contactLinks = [
   {
     icon: "fas fa-map-marker-alt",
     label: "in office",
-    href: "https://www.google.com/search?rlz=1C5CHFA_enUS742US743&q=Thrive+crabapple+GA&npsic=0&rflfq=1&rlha=0&rllag=34121037,-84317854,5456&tbm=lcl&ved=2ahUKEwiQo9OJ49HcAhUEW60KHeLjCfgQtgN6BAgBEAQ&tbs=lrf:!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2&rldoc=1#rlfi=hd:;si:8943253290162805855;mv:!1m3!1d14422.954924706815!2d-84.33052529876596!3d34.081218003388535!3m2!1i1500!2i838!4f13.1",
+    // href: "https://www.google.com/search?rlz=1C5CHFA_enUS742US743&q=Thrive+crabapple+GA&npsic=0&rflfq=1&rlha=0&rllag=34121037,-84317854,5456&tbm=lcl&ved=2ahUKEwiQo9OJ49HcAhUEW60KHeLjCfgQtgN6BAgBEAQ&tbs=lrf:!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2&rldoc=1#rlfi=hd:;si:8943253290162805855;mv:!1m3!1d14422.954924706815!2d-84.33052529876596!3d34.081218003388535!3m2!1i1500!2i838!4f13.1",
+    href: "https://goo.gl/maps/Zqy3PEM16ym",
     text: `12540 Broadwell Rd<br/>Suite 2201<br/>
     Milton, GA 30004`
   }

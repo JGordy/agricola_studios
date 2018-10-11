@@ -128,7 +128,7 @@ function renderContactLinks(id) {
         <i class="${index.icon}"></i>
         ${index.label}
         </p>
-        <a href=${index.href}>
+        <a href=${index.href} target="_blank">
             ${index.text}
         </a>`;
     })
